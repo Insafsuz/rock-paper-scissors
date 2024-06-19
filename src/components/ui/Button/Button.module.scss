@@ -1,0 +1,24 @@
+.button {
+  padding-inline: 3.6rem;
+  height: 4.2rem;
+  border-radius: 0.9rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.117647em;
+  text-transform: uppercase;
+  &.primary {
+    border: 0.2rem solid #898da8;
+    background-color: transparent;
+    color: #fff;
+    @include hover {
+      background-color: #1f3756;
+    }
+  }
+  &.secondary {
+    background-color: #fff;
+    color: #3b4363;
+    border: none;
+    @include hover {
+      color: red;
+    }
+  }
+}
