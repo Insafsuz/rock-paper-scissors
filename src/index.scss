@@ -32,7 +32,9 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
   background: radial-gradient(at top, #1f3756, #141539);
+  // background-color: rebeccapurple;
   color: #fff;
+  
 }
 
 h1,
@@ -80,6 +82,7 @@ a {
 
 .wrapper {
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -89,7 +92,3 @@ a {
   flex-grow: 1;
 }
 
-.title {
-  // font-size: clamp(1.5rem, 5vw, 3.75rem);
-  font-size: 5vw;
-}
