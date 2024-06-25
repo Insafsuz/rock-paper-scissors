@@ -1,0 +1,100 @@
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  transition: transform 0.2s ease;
+  @include hover {
+    transform: translateY(-10px);
+  }
+  &.big {
+    transform: scale(1.2);
+    @media (max-width: 767px) {
+      transform: scale(1);
+    }
+  }
+
+  &.paper {
+    top: 11%;
+    left: 19%;
+    @media (max-width: 767px) {
+      top: 0;
+      left: 2%;
+    }
+  }
+  &.scissors {
+    top: 11%;
+    right: 19%;
+    @media (max-width: 767px) {
+      top: 0;
+      right: 2%;
+    }
+  }
+  &.rock {
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+    @include hover {
+      transform: translate(-50%, -10px);
+    }
+    &.big {
+      transform: translateX(-50%) scale(1.2);
+      @media (max-width: 767px) {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+    @media (max-width: 767px) {
+      bottom: 42%;
+    }
+  }
+  img {
+    transform: scale(1.4);
+    @media (max-width: 767px) {
+      transform: scale(1);
+    }
+  }
+}
+
+.choice {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: inset 0 0.8rem #00000026;
+  @media (max-width: 767px) {
+    width: 10rem;
+    height: 10rem;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: -15%;
+    top: -15%;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  &.paper {
+    &:before {
+      background: linear-gradient(to bottom, #4865f4, #5671f5);
+      box-shadow: 0 0.8rem #0000004d, 0 0.8rem #5671f5;
+    }
+  }
+  &.scissors {
+    &:before {
+      background: linear-gradient(to bottom, #bc7e0b, #eca922);
+      box-shadow: 0 0.8rem #0000004d, 0 0.8rem #eca922;
+    }
+  }
+  &.rock {
+    &:before {
+      background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+      box-shadow: 0 0.8rem #0000004d, 0 0.8rem #dd405d;
+    }
+  }
+}
