@@ -9,7 +9,7 @@ const Header: FC = () => {
           <img className={styles.logo} src="images/logo.svg" alt="logo" />
           <div className={styles.count}>
             <p className={styles.score}>Score</p>
-            <span className={styles.total}>12</span>
+            <span className={styles.total}>0</span>
           </div>
         </div>
       </div>

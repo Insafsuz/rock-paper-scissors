@@ -5,9 +5,9 @@ import styles from './Game.module.scss'
 const Game: FC = () => {
   return (
     <section className={styles.game}>
-      <GameButton variant='paper' />
-      <GameButton variant='scissors' />
-      <GameButton variant='rock' />
+      <GameButton type='default' variant='paper' />
+      <GameButton type='default' variant='scissors' />
+      <GameButton type='default' variant='rock' />
     </section>
   )
 }

@@ -1,10 +1,12 @@
 .game {
   position: relative;
-  height: 42.8rem;
+  height: 40.3rem;
   max-width: 70.4rem;
   margin-inline: auto;
+  margin-top: 6rem;
   @media (max-width: 767px) {
-    width: 30rem;
+    max-width : 30rem;
+    margin-top: 10rem;
   }
   &:before {
     content: '';

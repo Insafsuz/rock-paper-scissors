@@ -1,0 +1,41 @@
+.result {
+  margin-top: 16rem;
+  @media (max-width: 767px) {
+    margin-top: 10rem;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13rem;
+  @media (max-width: 767px) {
+    max-width: 320rem;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+.choice {
+  border-radius: 50%;
+  &.winner {
+    z-index: -1;
+    box-shadow: 
+      /* Первая линия */ 0 0 0 6rem rgb(41, 50, 81),
+      /* Вторая линия */ 0 0 0 12rem rgba(41, 50, 81, 0.425),
+      /* Третья линия */ 0 0 0 19rem rgba(41, 50, 81, 0.369);
+  }
+}
+
+.info {
+
+}
+
+.message {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
