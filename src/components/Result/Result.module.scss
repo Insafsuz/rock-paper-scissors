@@ -58,6 +58,7 @@
   &.winner {
     position: relative;
     z-index: -1;
+    transition: box-shadow 0.4s ease-in-out;
     box-shadow: 
       /* Первая линия */ 0 0 0 6rem rgb(41, 50, 81),
       /* Вторая линия */ 0 0 0 12rem rgba(41, 50, 81, 0.425),
