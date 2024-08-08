@@ -1,8 +1,13 @@
 .header {
   margin-top: 4.6rem;
-  @media (max-width: 550px) {
+  @media (max-width: 767px) {
     margin-top: 3rem;
+    max-width: 50rem;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 2rem;
   }
+  
 }
 
 .container {
@@ -20,14 +25,14 @@
   padding-left: 3rem;
   padding-right: 2rem;
   height: 14.5rem;
-  @media (max-width: 550px) {
+  @media (max-width: 767px) {
     padding-left: 2.2rem;
     padding-right: 1rem;
     height: 9.5rem;
   }
   .logo {
-    @media (max-width: 550px) {
-      height: 50px;
+    @media (max-width: 767px) {
+      height: 5rem;
     }
   }
 }
@@ -43,7 +48,7 @@
   border-radius: 0.8rem;
   text-align: center;
   padding-block: 1.8rem;
-  @media (max-width: 550px) {
+  @media (max-width: 767px) {
     width: 8rem;
     height: 7.2rem;
   }
@@ -52,16 +57,16 @@
     letter-spacing: 0.125em;
     color: #2a46c0;
     text-transform: uppercase;
-    @media (max-width: 550px) {
+    @media (max-width: 767px) {
       font-size: 1.2rem;
     }
   }
   .total {
     color: #545266;
     font-weight: 700;
-    font-size: 5.2rem;
+    font-size: 6rem;
     line-height: 1;
-    @media (max-width: 550px) {
+    @media (max-width: 767px) {
       font-size: 3.9rem;
     }
   }

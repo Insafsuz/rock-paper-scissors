@@ -1,0 +1,94 @@
+.result {
+  margin-top: 16rem;
+  @media (max-width: 767px) {
+    margin-top: 8.8rem;
+  }
+}
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (max-width: 1023px) {
+    max-width: 75rem;
+  }
+  @media (max-width: 767px) {
+    max-width: 34rem;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  justify-content: center;
+  gap: 7rem;
+  @media (max-width: 1023px) {
+    gap: 4.3rem;
+  }
+  @media (max-width: 767px) {
+    gap: 5.2rem;
+  }
+}
+
+.choice {
+  position: relative;
+}
+
+.title {
+  width: 200%;
+  position: absolute;
+  left: 50%;
+  top: -30%;
+  transform: translate(-50%);
+  font-size: 2.6rem;
+  letter-spacing: 0.117647em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  @media (max-width: 767px) {
+    font-size: 1.6rem;
+    top: auto;
+    bottom: -40%;
+  }
+}
+
+.button {
+  border-radius: 50%;
+  &.winner {
+    position: relative;
+    z-index: -1;
+    box-shadow: 
+      /* Первая линия */ 0 0 0 6rem rgb(41, 50, 81),
+      /* Вторая линия */ 0 0 0 12rem rgba(41, 50, 81, 0.425),
+      /* Третья линия */ 0 0 0 19rem rgba(41, 50, 81, 0.369);
+    @media (max-width: 767px) {
+      box-shadow: 
+      /* Первая линия */ 0 0 0 3rem rgb(41, 50, 81),
+        /* Вторая линия */ 0 0 0 6rem rgba(41, 50, 81, 0.425),
+        /* Третья линия */ 0 0 0 9rem rgba(41, 50, 81, 0.369);
+    }
+  }
+}
+
+.info {
+  @media (max-width: 767px) {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 15rem;
+    transform: translate(-50%);
+  }
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  @media (max-width: 767px) {
+    margin-bottom: 2.5rem;
+  }
+}
