@@ -13,6 +13,7 @@ interface ResultProps {
 const Result: FC<ResultProps> = ({ setScene, myChoice, score, setScore }) => {
   const [house, setHouse] = useState('')
   const [playerResult, setPlayerResult] = useState('second')
+  const [counter, setCounter] = useState(3)
 
   const newHousePick = () => {
     const choices = ['rock', 'paper', 'scissors']
@@ -48,8 +49,20 @@ const Result: FC<ResultProps> = ({ setScene, myChoice, score, setScore }) => {
   }
 
   useEffect(() => {
-    result()
-  }, [house])
+    let timer: number | null = null
+
+    if (counter > 0) {
+      timer = setInterval(() => setCounter(prev => prev - 1), 1000)
+    } else {
+      result()
+    }
+
+    return () => {
+      if (timer !== null) {
+        clearInterval(timer)
+      }
+    }
+  }, [counter, house])
 
   return (
     <section className={styles.result}>
@@ -96,7 +109,13 @@ const Result: FC<ResultProps> = ({ setScene, myChoice, score, setScore }) => {
                 playerResult === 'lose' ? styles.winner : ''
               }`}
             >
-              <GameButton mode='special' choice={house} />
+              {counter === 0 ? (
+                <GameButton mode='special' choice={house} />
+              ) : (
+                <div className={styles.timer}>
+                  <span>{counter}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
